@@ -5,12 +5,12 @@
   ```xml
     <dependency>
       <groupId>com.dream11</groupId>
-      <artifactId>d11-vertx-dynamodb</artifactId>
-      <version>1.0.4</version>
+      <artifactId>vertx-dynamodb-client</artifactId>
+      <version>1.0.0</version>
     </dependency>
   ```
 
-* Create `resources/config/dynamo/dynamo-env(load/prod)` to override the default values
+* Create `resources/config/dynamo/dynamo-default` to override the default values
 
   Sample configuration file
 
@@ -88,4 +88,25 @@
                 .build(), true);
       }
   }
+
+* Sample code to use a custom config provider for dynamoDbClient
+
+ ```java
+public class CustomConfigProvider implements IConfigProvider {
+  @Override
+  public DynamoConfig getConfig() {
+    // custom config creation logic
+  }
+}
+```
+
+* You can then pass this custom config provider while creating the DynamoDBClient
+
+```java
+public DynamoDAO() {
+      this.dynamoDbEnhancedAsyncClient = DynamoDBClient.getDynamoDbEnhancedAsyncClient(new CustomConfigProvider());
+      this.orders = new DynamoTable<>("orders", Orders.class);
+      this.orderHistory = new DynamoTable<>("order_history", OrderHistory.class);
+      this.orderHistory1 = new DynamoTable<>("order_history1", OrderHistory.class);
+    }
 ```

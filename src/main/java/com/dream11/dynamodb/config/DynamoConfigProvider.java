@@ -1,12 +1,13 @@
-package com.dream11.dynamodb.client;
+package com.dream11.dynamodb.config;
 
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigBeanFactory;
 import com.typesafe.config.ConfigFactory;
 
-public class DynamoConfigProvider {
+public class DynamoConfigProvider implements IConfigProvider {
 
-  public static DynamoConfig getConfig() {
+  @Override
+  public DynamoConfig getConfig() {
     String environment =
         java.util.Optional.ofNullable(System.getProperty("app.environment")).orElse("default");
     String configFile = "config/dynamo/dynamo-" + environment + ".conf";

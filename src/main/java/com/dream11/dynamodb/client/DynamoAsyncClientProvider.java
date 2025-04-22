@@ -1,5 +1,7 @@
 package com.dream11.dynamodb.client;
 
+import com.dream11.dynamodb.config.DynamoConfig;
+import com.dream11.dynamodb.config.IConfigProvider;
 import java.time.Duration;
 import software.amazon.awssdk.core.client.config.ClientOverrideConfiguration;
 import software.amazon.awssdk.http.async.SdkAsyncHttpClient;
@@ -12,8 +14,8 @@ import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
 
 public class DynamoAsyncClientProvider {
 
-  public static DynamoDbAsyncClient getAsyncClient() {
-    DynamoConfig dynamoConfig = DynamoConfigProvider.getConfig();
+  public static DynamoDbAsyncClient getAsyncClient(IConfigProvider configProvider) {
+    DynamoConfig dynamoConfig = configProvider.getConfig();
     SdkAsyncHttpClient sdkAsyncHttpClient =
         AwsCrtAsyncHttpClient.builder()
             .maxConcurrency(dynamoConfig.getMaxConcurrency())
