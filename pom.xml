@@ -2,11 +2,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.dream11</groupId>
-  <artifactId>d11-vertx-dynamodb</artifactId>
+  <artifactId>vertx-dynamodb-client</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <name>d11-vertx-dynamodb</name>
+  <name>vertx-dynamodb-client</name>
   <description>RxJava library for using dynamoDb client with vert.x</description>
-  <url>https://github.com/dream11/d11-vertx-dynamoDB.git</url>
+  <url>https://github.com/dream11/vertx-dynamodb-client.git</url>
 
   <properties>
     <slf4j.version>2.0.5</slf4j.version>
@@ -129,16 +129,16 @@
   </dependencies>
 
   <scm>
-    <developerConnection>scm:git:https://github.com/dream11/d11-vertx-dynamoDB.git</developerConnection>
-    <connection>scm:git:https://github.com/dream11/d11-vertx-dynamoDB.git</connection>
-    <url>https://github.com/dream11/d11-vertx-dynamoDB.git</url>
+    <developerConnection>scm:git:https://github.com/dream11/vertx-dynamodb-client.git</developerConnection>
+    <connection>scm:git:https://github.com/dream11/vertx-dynamodb-client.git</connection>
+    <url>https://github.com/dream11/vertx-dynamodb-client.git</url>
     <tag>HEAD</tag>
   </scm>
 
   <licenses>
     <license>
       <name>MIT License</name>
-      <url>https://github.com/dream11/d11-vertx-dynamoDB.git/raw/main/LICENSE</url>
+      <url>https://github.com/dream11/vertx-dynamodb-client.git/raw/main/LICENSE</url>
     </license>
   </licenses>
 

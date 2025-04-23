@@ -1,4 +1,4 @@
-package com.dream11.dynamodb.client;
+package com.dream11.dynamodb.config;
 
 import com.typesafe.config.Optional;
 import lombok.Data;
