@@ -1,3 +1,4 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dream-sports-labs/vertx-dynamodb-client)
 ## Installation & Usage
 
 * Add to `pom.xml`
