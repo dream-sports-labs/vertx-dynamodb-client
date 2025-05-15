@@ -1,6 +1,8 @@
-name: Publish Release
+name: Push Artifact
 
 on:
+  push:
+    branches: [ main ]
   release:
     types: [released]
 
